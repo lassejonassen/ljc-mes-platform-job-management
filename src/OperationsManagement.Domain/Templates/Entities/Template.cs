@@ -1,6 +1,5 @@
-﻿using CleanArchitecture.Domain.Templates.Events;
-using OperationsManagement.Domain._Shared;
-using OperationsManagement.Domain.Templates.Errors;
+﻿using OperationsManagement.Domain.Templates.Errors;
+using OperationsManagement.Domain.Templates.Events;
 
 namespace OperationsManagement.Domain.Templates.Entities;
 

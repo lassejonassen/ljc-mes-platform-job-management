@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Application.Abstractions;
-using CleanArchitecture.Infrastructure;
+﻿using OperationsManagement.Application.Abstractions;
+using OperationsManagement.Infrastructure;
 
-namespace CleanArchitecture.WebAPI.Middleware;
+namespace OperationsManagement.WebAPI.Middleware;
 
 public class CorrelationIdMiddleware(RequestDelegate next)
 {

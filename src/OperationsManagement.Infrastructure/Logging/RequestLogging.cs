@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Serilog;
 
-namespace CleanArchitecture.Infrastructure.Logging;
+namespace OperationsManagement.Infrastructure.Logging;
 
 public static class RequestLogging
 {

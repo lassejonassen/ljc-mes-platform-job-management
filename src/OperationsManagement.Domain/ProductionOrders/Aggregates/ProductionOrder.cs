@@ -1,5 +1,4 @@
-﻿using OperationsManagement.Domain._Shared;
-using OperationsManagement.Domain.ProductionOrders.Entities;
+﻿using OperationsManagement.Domain.ProductionOrders.Entities;
 using OperationsManagement.Domain.ProductionOrders.Enums;
 using OperationsManagement.Domain.ProductionOrders.ValueObjects;
 
@@ -19,8 +18,8 @@ public sealed class ProductionOrder : AggregateRoot
     private readonly List<ProductionJob> _jobs = [];
     public IReadOnlyCollection<ProductionJob> Jobs => _jobs.AsReadOnly();
 
-    public static Result<ProductionOrder> CreateFromErp(ErpReference erpRef, string materialId, decimal quantity)
-    {
+    //public static Result<ProductionOrder> CreateFromErp(ErpReference erpRef, string materialId, decimal quantity)
+    //{
 
-    }
+    //}
 }

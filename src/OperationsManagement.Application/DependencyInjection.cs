@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.SharedKernel.Messaging;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using OperationsManagement.SharedKernel.Messaging;
 
-namespace CleanArchitecture.Application;
+namespace OperationsManagement.Application;
 
 public static class DependencyInjection
 {

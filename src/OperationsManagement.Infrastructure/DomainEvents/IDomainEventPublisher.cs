@@ -1,6 +1,6 @@
 ﻿using OperationsManagement.Domain._Shared.DomainEvents;
 
-namespace CleanArchitecture.Infrastructure.DomainEvents;
+namespace OperationsManagement.Infrastructure.DomainEvents;
 
 public interface IDomainEventPublisher
 {

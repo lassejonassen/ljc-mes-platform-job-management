@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Application.Abstractions;
-using CleanArchitecture.Application.Abstractions.IntegrationEvents;
-using CleanArchitecture.SharedKernel.IntegrationEvents;
+﻿using OperationsManagement.Application.Abstractions;
+using OperationsManagement.Application.Abstractions.IntegrationEvents;
+using OperationsManagement.SharedKernel.IntegrationEvents;
 
-namespace CleanArchitecture.Infrastructure.Messaging;
+namespace OperationsManagement.Infrastructure.Messaging;
 
 public class IntegrationEventStagingService(
     IntegrationEventBuffer buffer,

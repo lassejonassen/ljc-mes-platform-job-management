@@ -1,6 +1,6 @@
-using CleanArchitecture.Application;
-using CleanArchitecture.Infrastructure;
-using CleanArchitecture.WebAPI.Extensions;
+using OperationsManagement.Application;
+using OperationsManagement.Infrastructure;
+using OperationsManagement.WebAPI.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

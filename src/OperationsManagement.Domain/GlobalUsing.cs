@@ -1,2 +1,2 @@
-﻿global using CleanArchitecture.Domain._Shared;
-global using CleanArchitecture.SharedKernel;
+﻿global using OperationsManagement.Domain._Shared;
+global using OperationsManagement.SharedKernel;

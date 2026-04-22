@@ -1,12 +1,12 @@
-﻿using CleanArchitecture.Infrastructure.Messaging;
-using CleanArchitecture.Infrastructure.Persistence.DbContexts;
-using CleanArchitecture.Infrastructure.Persistence.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OperationsManagement.Infrastructure.Messaging;
+using OperationsManagement.Infrastructure.Persistence.DbContexts;
+using OperationsManagement.Infrastructure.Persistence.Entities;
 using System.Text.Json;
 
-namespace CleanArchitecture.Infrastructure.BackgroundServices;
+namespace OperationsManagement.Infrastructure.BackgroundServices;
 
 public class ProcessIntegrationEventsJob(
     IServiceScopeFactory scopeFactory,

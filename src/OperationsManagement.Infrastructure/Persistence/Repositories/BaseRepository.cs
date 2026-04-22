@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OperationsManagement.Domain._Shared;
 
-namespace CleanArchitecture.Infrastructure.Persistence.Repositories;
+namespace OperationsManagement.Infrastructure.Persistence.Repositories;
 
 internal abstract class BaseRepository<TEntity>(DbContext context) : IRepository<TEntity>
     where TEntity : Entity

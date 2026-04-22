@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.WebAPI.Contracts.Templates;
+﻿namespace OperationsManagement.WebAPI.Contracts.Templates;
 
 public sealed record TemplateCreateRequestDTO
 {

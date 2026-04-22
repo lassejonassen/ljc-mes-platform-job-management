@@ -1,14 +1,14 @@
-﻿using CleanArchitecture.Application.Abstractions;
-using CleanArchitecture.Infrastructure;
-using CleanArchitecture.SharedKernel;
-using CleanArchitecture.SharedKernel.Messaging;
-using OpenTelemetry.Logs;
+﻿using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
+using OperationsManagement.Application.Abstractions;
+using OperationsManagement.Infrastructure;
+using OperationsManagement.SharedKernel;
+using OperationsManagement.SharedKernel.Messaging;
 using System.Text.Json.Serialization;
 
-namespace CleanArchitecture.WebAPI.Extensions;
+namespace OperationsManagement.WebAPI.Extensions;
 
 public static class WebApplicationBuilderExtensions
 {

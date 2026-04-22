@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.SharedKernel;
+﻿namespace OperationsManagement.SharedKernel;
 
 public interface IDateTimeProvider
 {

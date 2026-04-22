@@ -1,11 +1,11 @@
-﻿using CleanArchitecture.Application.Abstractions.DomainEvents;
-using CleanArchitecture.Application.Abstractions.IntegrationEvents;
-using CleanArchitecture.Contracts.Templates;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
+using OperationsManagement.Application.Abstractions.DomainEvents;
+using OperationsManagement.Application.Abstractions.IntegrationEvents;
+using OperationsManagement.Contracts.Templates;
 using OperationsManagement.Domain.Templates.Events;
 using OperationsManagement.Domain.Templates.Repositories;
 
-namespace CleanArchitecture.Application.Templates.DomainEventHandlers;
+namespace OperationsManagement.Application.Templates.DomainEventHandlers;
 
 public sealed class TemplateCreatedDomainEventHandler(
     ITemplateRepository templateRepository,

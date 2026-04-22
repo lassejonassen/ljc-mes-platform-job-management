@@ -1,6 +1,6 @@
 ﻿using OperationsManagement.Domain._Shared;
 
-namespace OperationsManagement.Domain.Units.ValueObjects;
+namespace OperationsManagement.Domain.Equipments.ValueObjects;
 
 public sealed class UnsAddress(string enterprise, string site, string area, string processCell, string asset) : ValueObject
 {

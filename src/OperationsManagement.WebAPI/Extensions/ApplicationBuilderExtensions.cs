@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Infrastructure.Persistence.DbContexts;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using OperationsManagement.Infrastructure.Persistence.DbContexts;
 
-namespace CleanArchitecture.WebAPI.Extensions;
+namespace OperationsManagement.WebAPI.Extensions;
 
 public static partial class ApplicationBuilderExtensions
 {

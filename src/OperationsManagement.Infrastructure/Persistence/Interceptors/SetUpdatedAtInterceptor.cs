@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using OperationsManagement.Domain._Shared;
 
-namespace CleanArchitecture.Infrastructure.Persistence.Interceptors;
+namespace OperationsManagement.Infrastructure.Persistence.Interceptors;
 
 public sealed class SetUpdatedAtInterceptor : SaveChangesInterceptor
 {

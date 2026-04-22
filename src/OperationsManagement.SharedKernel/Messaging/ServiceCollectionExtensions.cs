@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using System.Reflection;
 
-namespace CleanArchitecture.SharedKernel.Messaging;
+namespace OperationsManagement.SharedKernel.Messaging;
 
 public static class ServiceCollectionExtensions
 {

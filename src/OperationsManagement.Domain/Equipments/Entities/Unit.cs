@@ -1,6 +1,6 @@
 ﻿using OperationsManagement.Domain._Shared;
-using OperationsManagement.Domain.Units.Enums;
-using OperationsManagement.Domain.Units.ValueObjects;
+using OperationsManagement.Domain.Equipments.Enums;
+using OperationsManagement.Domain.Equipments.ValueObjects;
 
 namespace OperationsManagement.Domain.Equipments.Entities;
 

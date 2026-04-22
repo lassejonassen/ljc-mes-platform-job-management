@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.SharedKernel.IntegrationEvents;
+﻿using OperationsManagement.SharedKernel.IntegrationEvents;
 
-namespace CleanArchitecture.Infrastructure.Messaging;
+namespace OperationsManagement.Infrastructure.Messaging;
 
 public interface IIntegrationEventBus
 {

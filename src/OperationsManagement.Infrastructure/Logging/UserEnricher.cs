@@ -2,7 +2,7 @@
 using Serilog.Core;
 using Serilog.Events;
 
-namespace CleanArchitecture.Infrastructure.Logging;
+namespace OperationsManagement.Infrastructure.Logging;
 
 public class UserEnricher : ILogEventEnricher
 {

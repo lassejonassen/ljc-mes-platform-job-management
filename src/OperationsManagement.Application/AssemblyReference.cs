@@ -1,3 +1,3 @@
-﻿namespace CleanArchitecture.Application;
+﻿namespace OperationsManagement.Application;
 
 public partial class AssemblyReference;

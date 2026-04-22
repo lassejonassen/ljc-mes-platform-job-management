@@ -1,4 +1,4 @@
-﻿namespace OperationsManagement.Domain.Units.Enums;
+﻿namespace OperationsManagement.Domain.Equipments.Enums;
 
 public enum UnitStatus
 {

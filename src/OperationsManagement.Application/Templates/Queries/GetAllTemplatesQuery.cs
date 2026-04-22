@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Application.Templates.DTOs;
-using CleanArchitecture.SharedKernel.Messaging;
+﻿using OperationsManagement.Application.Templates.DTOs;
 using OperationsManagement.Domain.Templates.Repositories;
+using OperationsManagement.SharedKernel.Messaging;
 
-namespace CleanArchitecture.Application.Templates.Queries;
+namespace OperationsManagement.Application.Templates.Queries;
 
 public sealed record GetAllTemplatesQuery : IRequest<IReadOnlyCollection<TemplateDTO>>;
 

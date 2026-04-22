@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.Templates.DTOs;
+﻿namespace OperationsManagement.Application.Templates.DTOs;
 
 public sealed record TemplateDTO
 {

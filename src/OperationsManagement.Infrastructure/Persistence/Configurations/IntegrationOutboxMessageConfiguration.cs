@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Infrastructure.Persistence.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using OperationsManagement.Infrastructure.Persistence.Entities;
 
-namespace CleanArchitecture.Infrastructure.Persistence.Configurations;
+namespace OperationsManagement.Infrastructure.Persistence.Configurations;
 
 public sealed class IntegrationOutboxMessageConfiguration : IEntityTypeConfiguration<IntegrationOutboxMessage>
 {

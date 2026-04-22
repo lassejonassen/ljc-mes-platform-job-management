@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.SharedKernel.IntegrationEvents;
+﻿namespace OperationsManagement.SharedKernel.IntegrationEvents;
 
 public interface IIntegrationEvent
 {

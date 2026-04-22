@@ -1,28 +1,29 @@
-﻿using CleanArchitecture.Application.Abstractions;
-using CleanArchitecture.Application.Abstractions.DomainEvents;
-using CleanArchitecture.Application.Abstractions.IntegrationEvents;
-using CleanArchitecture.Infrastructure.BackgroundServices;
-using CleanArchitecture.Infrastructure.DomainEvents;
-using CleanArchitecture.Infrastructure.Messaging;
-using CleanArchitecture.Infrastructure.Messaging.RabbitMq;
-using CleanArchitecture.Infrastructure.Persistence.DbContexts;
-using CleanArchitecture.Infrastructure.Persistence.Interceptors;
-using CleanArchitecture.Infrastructure.Persistence.Repositories;
-using CleanArchitecture.SharedKernel;
+﻿using OperationsManagement.Application.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using OperationsManagement.Application.Abstractions.DomainEvents;
+using OperationsManagement.Application.Abstractions.IntegrationEvents;
 using OperationsManagement.Domain.Templates.Repositories;
+using OperationsManagement.Infrastructure;
+using OperationsManagement.Infrastructure.BackgroundServices;
+using OperationsManagement.Infrastructure.DomainEvents;
+using OperationsManagement.Infrastructure.Messaging;
+using OperationsManagement.Infrastructure.Messaging.RabbitMq;
+using OperationsManagement.Infrastructure.Persistence.DbContexts;
+using OperationsManagement.Infrastructure.Persistence.Interceptors;
+using OperationsManagement.Infrastructure.Persistence.Repositories;
+using OperationsManagement.SharedKernel;
 using Polly;
 using Polly.CircuitBreaker;
 using Polly.Retry;
 using RabbitMQ.Client;
 using Serilog;
 
-namespace CleanArchitecture.Infrastructure;
+namespace OperationsManagement.Infrastructure;
 
 public static class DependencyInjection
 {

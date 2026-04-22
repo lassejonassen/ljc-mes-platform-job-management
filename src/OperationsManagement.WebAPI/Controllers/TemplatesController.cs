@@ -1,11 +1,10 @@
-﻿using CleanArchitecture.Application.Templates.Commands;
-using CleanArchitecture.Application.Templates.DTOs;
-using CleanArchitecture.Application.Templates.Queries;
-using CleanArchitecture.SharedKernel.Messaging;
-using CleanArchitecture.WebAPI.Contracts.Templates;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using OperationsManagement.Application.Templates.Commands;
+using OperationsManagement.Application.Templates.DTOs;
+using OperationsManagement.Application.Templates.Queries;
+using OperationsManagement.WebAPI.Contracts.Templates;
 
-namespace CleanArchitecture.WebAPI.Controllers;
+namespace OperationsManagement.WebAPI.Controllers;
 
 [Route("/api/templates")]
 public class TemplatesController : BaseController

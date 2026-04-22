@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OperationsManagement.Domain.Templates.Entities;
 
-namespace CleanArchitecture.Infrastructure.Persistence.Configurations;
+namespace OperationsManagement.Infrastructure.Persistence.Configurations;
 
 internal sealed class TemplateConfiguration : IEntityTypeConfiguration<Template>
 {

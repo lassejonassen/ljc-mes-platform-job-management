@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.SharedKernel;
-using CleanArchitecture.SharedKernel.Messaging;
-using OperationsManagement.Domain.Templates.Errors;
+﻿using OperationsManagement.Domain.Templates.Errors;
 using OperationsManagement.Domain.Templates.Repositories;
+using OperationsManagement.SharedKernel;
+using OperationsManagement.SharedKernel.Messaging;
 
-namespace CleanArchitecture.Application.Templates.Commands;
+namespace OperationsManagement.Application.Templates.Commands;
 
 public sealed record DeleteTemplateCommand(Guid Id) : IRequest<Result>;
 

@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Infrastructure.Messaging.RabbitMq;
+﻿namespace OperationsManagement.Infrastructure.Messaging.RabbitMq;
 
 public class RabbitMqSettings
 {

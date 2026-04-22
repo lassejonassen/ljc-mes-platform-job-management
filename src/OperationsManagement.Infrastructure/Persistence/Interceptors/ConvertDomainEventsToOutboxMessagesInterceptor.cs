@@ -1,11 +1,11 @@
-﻿using CleanArchitecture.Infrastructure.Options;
-using CleanArchitecture.Infrastructure.Persistence.Entities;
+﻿using OperationsManagement.Infrastructure.Options;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using OperationsManagement.Domain._Shared;
+using OperationsManagement.Infrastructure.Persistence.Entities;
 using System.Text.Json;
 
-namespace CleanArchitecture.Infrastructure.Persistence.Interceptors;
+namespace OperationsManagement.Infrastructure.Persistence.Interceptors;
 
 public sealed class ConvertDomainEventsToOutboxMessagesInterceptor : SaveChangesInterceptor
 {

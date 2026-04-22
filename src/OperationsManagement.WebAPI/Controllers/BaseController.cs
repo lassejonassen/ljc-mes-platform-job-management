@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.SharedKernel;
-using CleanArchitecture.SharedKernel.Messaging;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using OperationsManagement.SharedKernel;
+using OperationsManagement.SharedKernel.Messaging;
 
-namespace CleanArchitecture.WebAPI.Controllers;
+namespace OperationsManagement.WebAPI.Controllers;
 
 [ApiController]
 public abstract class BaseController : ControllerBase

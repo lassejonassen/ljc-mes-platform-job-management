@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Application.Abstractions.DomainEvents;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using OperationsManagement.Application.Abstractions.DomainEvents;
 using OperationsManagement.Domain._Shared.DomainEvents;
 
-namespace CleanArchitecture.Infrastructure.DomainEvents;
+namespace OperationsManagement.Infrastructure.DomainEvents;
 
 public class DomainEventPublisher(IServiceProvider serviceProvider) : IDomainEventPublisher
 {

@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.SharedKernel;
+﻿namespace OperationsManagement.SharedKernel;
 
 public sealed record Error(string Code, string Description, ErrorType Type)
 {

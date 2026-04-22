@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.SharedKernel;
+﻿using OperationsManagement.SharedKernel;
 
-namespace CleanArchitecture.Infrastructure;
+namespace OperationsManagement.Infrastructure;
 
 public sealed class DateTimeProvider : IDateTimeProvider
 {

@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Infrastructure.Persistence.DbContexts;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using OperationsManagement.Domain.Templates.Entities;
 using OperationsManagement.Domain.Templates.Repositories;
+using OperationsManagement.Infrastructure.Persistence.DbContexts;
 
-namespace CleanArchitecture.Infrastructure.Persistence.Repositories;
+namespace OperationsManagement.Infrastructure.Persistence.Repositories;
 
 internal sealed class TemplateRepository(ApplicationDbContext context)
     : BaseRepository<Template>(context), ITemplateRepository

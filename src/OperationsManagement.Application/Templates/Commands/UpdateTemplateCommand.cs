@@ -1,10 +1,10 @@
-﻿using CleanArchitecture.Application.Templates.DTOs;
-using CleanArchitecture.SharedKernel;
-using CleanArchitecture.SharedKernel.Messaging;
+﻿using OperationsManagement.Application.Templates.DTOs;
 using OperationsManagement.Domain.Templates.Errors;
 using OperationsManagement.Domain.Templates.Repositories;
+using OperationsManagement.SharedKernel;
+using OperationsManagement.SharedKernel.Messaging;
 
-namespace CleanArchitecture.Application.Templates.Commands;
+namespace OperationsManagement.Application.Templates.Commands;
 
 public sealed record UpdateTemplateCommand(UpdateTemplateDTO Dto) : IRequest<Result>;
 

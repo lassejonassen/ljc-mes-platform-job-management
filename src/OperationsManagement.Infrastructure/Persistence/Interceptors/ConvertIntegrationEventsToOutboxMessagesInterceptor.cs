@@ -1,10 +1,10 @@
-﻿using CleanArchitecture.Infrastructure.Messaging;
-using CleanArchitecture.Infrastructure.Persistence.Entities;
-using Microsoft.EntityFrameworkCore.Diagnostics;
+﻿using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using OperationsManagement.Infrastructure.Messaging;
+using OperationsManagement.Infrastructure.Persistence.Entities;
 using System.Text.Json;
 
-namespace CleanArchitecture.Infrastructure.Persistence.Interceptors;
+namespace OperationsManagement.Infrastructure.Persistence.Interceptors;
 
 public sealed class ConvertIntegrationEventsToOutboxMessagesInterceptor : SaveChangesInterceptor
 {

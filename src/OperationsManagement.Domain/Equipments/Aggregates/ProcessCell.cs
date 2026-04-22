@@ -1,5 +1,4 @@
-﻿using OperationsManagement.Domain._Shared;
-using OperationsManagement.Domain.Equipments.Entities;
+﻿using OperationsManagement.Domain.Equipments.Entities;
 
 namespace OperationsManagement.Domain.Equipments.Aggregates;
 

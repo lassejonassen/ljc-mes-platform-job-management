@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.SharedKernel.IntegrationEvents;
+﻿using OperationsManagement.SharedKernel.IntegrationEvents;
 
-namespace CleanArchitecture.Application.Abstractions.IntegrationEvents;
+namespace OperationsManagement.Application.Abstractions.IntegrationEvents;
 
 public interface IIntegrationEventPublisher
 {

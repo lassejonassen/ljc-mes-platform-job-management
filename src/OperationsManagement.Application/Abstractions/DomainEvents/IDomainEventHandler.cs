@@ -1,6 +1,6 @@
 ﻿using OperationsManagement.Domain._Shared.DomainEvents;
 
-namespace CleanArchitecture.Application.Abstractions.DomainEvents;
+namespace OperationsManagement.Application.Abstractions.DomainEvents;
 
 public interface IDomainEventHandler<in TEvent>
     where TEvent : IDomainEvent
