@@ -4,4 +4,9 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
+
+    <PropertyGroup>
+        <ServiceName>ljc-mes-platform-operations-management</ServiceName>
+        <Version>0.0.1</Version>
+    </PropertyGroup>
 </Project>
