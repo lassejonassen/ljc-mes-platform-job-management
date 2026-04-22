@@ -14,25 +14,25 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Directory.Packages.props", "."]
 COPY ["Directory.Build.props", "."]
-COPY ["src/CleanArchitecture.WebAPI/CleanArchitecture.WebAPI.csproj", "src/CleanArchitecture.WebAPI/"]
-COPY ["src/CleanArchitecture.Application/CleanArchitecture.Application.csproj", "src/CleanArchitecture.Application/"]
-COPY ["src/CleanArchitecture.Contracts/CleanArchitecture.Contracts.csproj", "src/CleanArchitecture.Contracts/"]
-COPY ["src/CleanArchitecture.SharedKernel/CleanArchitecture.SharedKernel.csproj", "src/CleanArchitecture.SharedKernel/"]
-COPY ["src/CleanArchitecture.Domain/CleanArchitecture.Domain.csproj", "src/CleanArchitecture.Domain/"]
-COPY ["src/CleanArchitecture.Infrastructure/CleanArchitecture.Infrastructure.csproj", "src/CleanArchitecture.Infrastructure/"]
-COPY ["src/CleanArchitecture.WebAPI.Contracts/CleanArchitecture.WebAPI.Contracts.csproj", "src/CleanArchitecture.WebAPI.Contracts/"]
-RUN dotnet restore "./src/CleanArchitecture.WebAPI/CleanArchitecture.WebAPI.csproj"
+COPY ["src/OperationsManagement.WebAPI/OperationsManagement.WebAPI.csproj", "src/OperationsManagement.WebAPI/"]
+COPY ["src/OperationsManagement.Application/OperationsManagement.Application.csproj", "src/OperationsManagement.Application/"]
+COPY ["src/OperationsManagement.Contracts/OperationsManagement.Contracts.csproj", "src/OperationsManagement.Contracts/"]
+COPY ["src/OperationsManagement.SharedKernel/OperationsManagement.SharedKernel.csproj", "src/OperationsManagement.SharedKernel/"]
+COPY ["src/OperationsManagement.Domain/OperationsManagement.Domain.csproj", "src/OperationsManagement.Domain/"]
+COPY ["src/OperationsManagement.Infrastructure/OperationsManagement.Infrastructure.csproj", "src/OperationsManagement.Infrastructure/"]
+COPY ["src/OperationsManagement.WebAPI.Contracts/OperationsManagement.WebAPI.Contracts.csproj", "src/OperationsManagement.WebAPI.Contracts/"]
+RUN dotnet restore "./src/OperationsManagement.WebAPI/OperationsManagement.WebAPI.csproj"
 COPY . .
-WORKDIR "/src/src/CleanArchitecture.WebAPI"
-RUN dotnet build "./CleanArchitecture.WebAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/src/OperationsManagement.WebAPI"
+RUN dotnet build "./OperationsManagement.WebAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./CleanArchitecture.WebAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./OperationsManagement.WebAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "CleanArchitecture.WebAPI.dll"]
+ENTRYPOINT ["dotnet", "OperationsManagement.WebAPI.dll"]
