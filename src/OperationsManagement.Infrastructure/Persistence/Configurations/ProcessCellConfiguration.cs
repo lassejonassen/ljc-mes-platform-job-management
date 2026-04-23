@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OperationsManagement.Domain.Assets.Aggregates;
+using OperationsManagement.Domain.Assets.Entities;
 
 namespace OperationsManagement.Infrastructure.Persistence.Configurations;
 
@@ -8,15 +9,15 @@ public class ProcessCellConfiguration : IEntityTypeConfiguration<ProcessCell>
 {
     public void Configure(EntityTypeBuilder<ProcessCell> builder)
     {
-        builder.ToTable("ProcessCells", "Infrastructure");
-        builder.HasKey(pc => pc.Id);
-
-        builder.Property(pc => pc.Name).IsRequired().HasMaxLength(100);
-
         builder.ToTable("ProcessCells");
         builder.HasKey(pc => pc.Id);
 
-        builder.Property(pc => pc.Name).IsRequired().HasMaxLength(100);
+        builder.Property(pc => pc.Name)
+            .IsRequired()
+            .HasMaxLength(100);
+
+        builder.Property(pc => pc.Description)
+            .IsRequired(false);
 
         // Enforce FK to Area Aggregate
         builder.HasOne<Area>()
@@ -27,15 +28,26 @@ public class ProcessCellConfiguration : IEntityTypeConfiguration<ProcessCell>
         // This is where you connect to the Units you mentioned earlier
         builder.OwnsMany(pc => pc.Units, unitBuilder =>
         {
-            unitBuilder.ToTable("Units", "Infrastructure");
+            unitBuilder.ToTable("Units");
             unitBuilder.HasKey(u => u.Id);
 
             // Link to Parent Aggregate
-            unitBuilder.WithOwner().HasForeignKey("ProcessCellId");
+            unitBuilder.WithOwner()
+            .HasForeignKey(nameof(Unit.ProcessCellId));
 
             unitBuilder.Property(u => u.Name)
                 .IsRequired()
                 .HasMaxLength(100);
+
+            unitBuilder.Property(u => u.Description)
+                .IsRequired(false);
+
+            unitBuilder.Property(u => u.ProcessSegmentId)
+                .IsRequired(true);
+
+            unitBuilder.Property(u => u.Status)
+                .HasConversion<string>()
+                .IsRequired(true);
 
             // Configuring the Complex Property: UnsAddress
             // This flattens the UnsAddress properties into the Units table
@@ -60,9 +72,6 @@ public class ProcessCellConfiguration : IEntityTypeConfiguration<ProcessCell>
                 addressBuilder.Property(a => a.Unit)
                     .HasColumnName("Uns_Unit")
                     .HasMaxLength(100);
-
-                // Note: FullPath is likely a computed property in your DTO/Domain 
-                // and doesn't necessarily need to be stored in the DB.
             });
         });
     }

@@ -11,17 +11,26 @@ public class AreaConfiguration : IEntityTypeConfiguration<Area>
         builder.ToTable("Areas");
         builder.HasKey(a => a.Id);
 
-        builder.Property(a => a.Name).IsRequired().HasMaxLength(100);
+        builder.Property(a => a.Name)
+            .IsRequired()
+            .HasMaxLength(100);
+
+        builder.Property(x => x.Description)
+            .IsRequired(false);
 
         // Enforce the Foreign Key to the Site Aggregate
         builder.HasOne<Site>()
                .WithMany() // Site doesn't have a Navigation Property of Areas
                .HasForeignKey(a => a.SiteId)
-               .OnDelete(DeleteBehavior.Restrict);
+               .OnDelete(DeleteBehavior.Restrict)
+               .IsRequired(true);
 
-        // Mapping the private collection of ProcessCellIds
-        builder.Property(a => a.ProcessCellIds)
-               .HasField("_processCellIds")
-               .UsePropertyAccessMode(PropertyAccessMode.Field);
+        builder.HasMany<ProcessCell>()
+           .WithOne()
+           .HasForeignKey(x => x.AreaId)
+           .OnDelete(DeleteBehavior.Cascade);
+
+        var navigation = builder.Metadata.FindNavigation(nameof(Area.ProcessCellIds));
+        navigation?.SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 }

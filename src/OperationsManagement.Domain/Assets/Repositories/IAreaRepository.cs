@@ -6,4 +6,5 @@ public interface IAreaRepository : IRepository<Area>
 {
     Task<IReadOnlyCollection<Area>> GetAllAsync(CancellationToken cancellationToken);
     Task<Area?> GetByIdAsync(Guid id, CancellationToken cancellationToken);
+    Task<bool> IsNameUniqueAsync(string name, CancellationToken cancellationToken);
 }

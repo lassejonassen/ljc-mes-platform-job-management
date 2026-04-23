@@ -12,13 +12,18 @@ public class SiteConfiguration : IEntityTypeConfiguration<Site>
         builder.HasKey(s => s.Id);
 
         builder.Property(s => s.Name).IsRequired().HasMaxLength(100);
-        builder.Property(s => s.Description).HasMaxLength(500);
+        builder.Property(s => s.Description).HasMaxLength(500).IsRequired(false);
 
         // DDD Reference: We don't map a physical relationship to Area here 
         // because Area is its own Aggregate Root. 
         // We ignore the _areaIds collection or map it as a primitive.
-        builder.Property(s => s.AreaIds)
-               .HasField("_areaIds") // Use the private backing field
-               .UsePropertyAccessMode(PropertyAccessMode.Field);
+
+        builder.HasMany<Area>()
+            .WithOne()
+            .HasForeignKey(x => x.SiteId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        var navigation = builder.Metadata.FindNavigation(nameof(Site.AreaIds));
+        navigation?.SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 }

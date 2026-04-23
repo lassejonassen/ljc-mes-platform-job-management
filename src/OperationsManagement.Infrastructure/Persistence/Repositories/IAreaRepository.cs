@@ -18,4 +18,9 @@ internal sealed class AreaRepository(ApplicationDbContext context)
         return await DbContext.Set<Area>()
             .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
     }
+
+    public async Task<bool> IsNameUniqueAsync(string name, CancellationToken cancellationToken)
+    {
+        return !await DbContext.Set<Area>().AnyAsync(x => x.Name == name, cancellationToken);
+    }
 }

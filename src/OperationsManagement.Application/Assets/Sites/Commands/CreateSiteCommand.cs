@@ -16,9 +16,9 @@ public sealed class CreateSiteCommandHandler(
 {
     public async Task<Result<Guid>> Handle(CreateSiteCommand request, CancellationToken cancellationToken)
     {
-        var isSkuUnique = await repository.IsNameUniqueAsync(request.Name, cancellationToken);
+        var isNameUnique = await repository.IsNameUniqueAsync(request.Name, cancellationToken);
 
-        if (!isSkuUnique)
+        if (!isNameUnique)
             return Result.Failure<Guid>(SiteErrors.AlreadyExists);
 
         var site = Site.Create(request.Name, request.Description, dateTimeProvider.UtcNow);
