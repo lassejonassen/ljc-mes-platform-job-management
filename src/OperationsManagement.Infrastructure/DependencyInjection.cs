@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using OperationsManagement.Domain.ProductionExecution.Repositories;
 using Polly;
 using Polly.CircuitBreaker;
 using Polly.Retry;
@@ -71,10 +70,8 @@ public static class DependencyInjection
         });
 
         builder.Services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
-        builder.Services.AddScoped<IWorkCenterRepository, EquipmentClassRepository>();
-        builder.Services.AddScoped<IAreaRepository, AreaRepository>();
-        builder.Services.AddScoped<IEquipmentClassRepository, ProcessCellRepository>();
-
+        builder.Services.AddScoped<IEquipmentClassRepository, EquipmentClassRepository>();
+        builder.Services.AddScoped<IWorkCenterRepository, WorkCenterRepository>();
 
         return builder;
     }

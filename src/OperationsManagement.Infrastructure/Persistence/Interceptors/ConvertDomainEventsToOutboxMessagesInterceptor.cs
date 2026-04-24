@@ -1,9 +1,7 @@
-﻿using OperationsManagement.Infrastructure.Options;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
-using System.Text.Json;
+﻿using Microsoft.EntityFrameworkCore.Diagnostics;
 using ResourceExecution.Domain._Shared;
 using ResourceExecution.Infrastructure.Persistence.Entities;
+using System.Text.Json;
 
 namespace ResourceExecution.Infrastructure.Persistence.Interceptors;
 
