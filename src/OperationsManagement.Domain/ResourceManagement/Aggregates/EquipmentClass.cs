@@ -1,7 +1,5 @@
-﻿using ResourceExecution.Domain._Shared;
-using ResourceExecution.Domain.ResourceManagement.Errors;
+﻿using ResourceExecution.Domain.ResourceManagement.Errors;
 using ResourceExecution.Domain.ResourceManagement.ValueObjects;
-using ResourceExecution.SharedKernel;
 
 namespace ResourceExecution.Domain.ResourceManagement.Aggregates;
 

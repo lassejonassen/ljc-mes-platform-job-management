@@ -71,7 +71,7 @@ public static class DependencyInjection
         });
 
         builder.Services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
-        builder.Services.AddScoped<IWorkCenterRepository, SiteRepository>();
+        builder.Services.AddScoped<IWorkCenterRepository, EquipmentClassRepository>();
         builder.Services.AddScoped<IAreaRepository, AreaRepository>();
         builder.Services.AddScoped<IEquipmentClassRepository, ProcessCellRepository>();
 
