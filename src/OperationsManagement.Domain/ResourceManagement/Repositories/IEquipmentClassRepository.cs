@@ -1,5 +1,4 @@
-﻿using ResourceExecution.Domain._Shared;
-using ResourceExecution.Domain.ResourceManagement.Aggregates;
+﻿using ResourceExecution.Domain.ResourceManagement.Aggregates;
 
 namespace ResourceExecution.Domain.ResourceManagement.Repositories;
 

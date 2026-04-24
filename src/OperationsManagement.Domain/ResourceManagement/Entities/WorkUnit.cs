@@ -1,14 +1,15 @@
-﻿using ResourceExecution.Domain._Shared;
-using ResourceExecution.Domain.ResourceManagement.Aggregates;
+﻿using ResourceExecution.Domain.ResourceManagement.Aggregates;
 using ResourceExecution.Domain.ResourceManagement.Enums;
 using ResourceExecution.Domain.ResourceManagement.Errors;
 using ResourceExecution.Domain.ResourceManagement.ValueObjects;
-using ResourceExecution.SharedKernel;
 
 namespace ResourceExecution.Domain.ResourceManagement.Entities;
 
 public sealed class WorkUnit : AggregateRoot
 {
+    public const int NameMaxLength = 20;
+    public const int DescriptionMaxLength = 100;
+
     private WorkUnit() { }
     private WorkUnit(DateTime utcNow) : base(utcNow) { }
 

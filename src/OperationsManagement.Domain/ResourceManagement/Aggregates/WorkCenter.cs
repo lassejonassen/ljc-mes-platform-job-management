@@ -1,12 +1,13 @@
-﻿using ResourceExecution.Domain._Shared;
-using ResourceExecution.Domain.ResourceManagement.Entities;
+﻿using ResourceExecution.Domain.ResourceManagement.Entities;
 using ResourceExecution.Domain.ResourceManagement.Errors;
-using ResourceExecution.SharedKernel;
 
 namespace ResourceExecution.Domain.ResourceManagement.Aggregates;
 
 public sealed class WorkCenter : AggregateRoot
 {
+    public const int NameMaxLength = 20;
+    public const int DescriptionMaxLength = 100;
+
     private WorkCenter() { }
     private WorkCenter(DateTime utcNow) : base(utcNow) { }
 

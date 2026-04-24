@@ -1,7 +1,5 @@
-﻿using ResourceExecution.Domain._Shared;
-using ResourceExecution.Domain.ResourceManagement.Errors;
+﻿using ResourceExecution.Domain.ResourceManagement.Errors;
 using ResourceExecution.Domain.ResourceManagement.ValueObjects;
-using ResourceExecution.SharedKernel;
 
 namespace ResourceExecution.Domain.ResourceManagement.Aggregates;
 
@@ -94,10 +92,10 @@ public sealed class EquipmentClass : AggregateRoot
         if (string.IsNullOrWhiteSpace(name))
             return Result.Failure(EquipmentClassErrors.NameRequired);
 
-        if (name.Length < NameMaxLength)
+        if (name.Length > NameMaxLength)
             return Result.Failure(EquipmentClassErrors.NameTooLong);
 
-        if (description is not null && description.Length < DescriptionMaxLength)
+        if (description is not null && description.Length > DescriptionMaxLength)
             return Result.Failure(EquipmentClassErrors.DescriptionTooLong);
 
         return Result.Success();

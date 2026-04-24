@@ -1,10 +1,11 @@
-﻿using ResourceExecution.Domain._Shared;
-using ResourceExecution.SharedKernel;
-
-namespace ResourceExecution.Domain.ResourceManagement.ValueObjects;
+﻿namespace ResourceExecution.Domain.ResourceManagement.ValueObjects;
 
 public sealed class EquipmentCapability(string name, string value, string unitOfMeasure) : ValueObject
 {
+    public const int NameMaxLength = 50;
+    public const int ValueMaxLength = 100;
+    public const int UnitOfMeasureMaxLength = 100;
+
     // Examples: "MaxPressure", "MinTemperature", "ContainerType", "MaxSpeed"
     public string Name { get; } = name;
 
