@@ -69,9 +69,9 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./src/OperationsManagement.WebAPI/Dockerfile
+          file: ./src/ResourceExecution.WebAPI/Dockerfile
           push: true
           # Pulls the version from the release job's output
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/ljt-mes-platform-operations-management:v${{ needs.release.outputs.version }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/ljt-mes-platform-operations-management:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/ljt-mes-platform-resource-execution:v${{ needs.release.outputs.version }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/ljt-mes-platform-resource-execution:latest
